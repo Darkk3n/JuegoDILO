@@ -1,0 +1,468 @@
+﻿<Application x:Class="JuegoReconVoz.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+         
+    	<Style x:Key="MinimizarStyle" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image1" Source="/JuegoReconVoz;component/Images/MinimizarBTN.png" Stretch="Fill"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="MaximizarStyle" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image2" Source="/JuegoReconVoz;component/Images/MaximizarBTN.png" Stretch="Fill"/>
+    						<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="OpcionStyle" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image4" Source="/JuegoReconVoz;component/Images/OpcionesBTN.png" Stretch="Fill"/>
+    						<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="JugarStyle" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image5" Source="/JuegoReconVoz;component/Images/JugarBTN.png" Stretch="Fill"/>
+    						<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="SalirStyle" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image6" Source="/JuegoReconVoz;component/Images/SalirBTN.png" Stretch="Fill"/>
+    						<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="BotonCerrar" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image4" Source="/JuegoReconVoz;component/Images/CerrarBTN.png" Stretch="Fill"/>
+    						<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="PrincipianteStyle" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image1" Source="/JuegoReconVoz;component/Images/principiante.png" Stretch="Fill"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="AvanzadoStyle" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image3" Source="/JuegoReconVoz;component/Images/avanzado.png" Stretch="Fill"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="PersonalizarStyle" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image2" Source="/JuegoReconVoz;component/Images/personalizar.png" Stretch="Fill"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="CheckStyleOn" TargetType="{x:Type CheckBox}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type CheckBox}">
+    					<Grid>
+    						<Image x:Name="image6" Source="/JuegoReconVoz;component/Images/CheckOn.png" Stretch="Fill"/>
+    					</Grid>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="chkOffStyle" TargetType="{x:Type CheckBox}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type CheckBox}">
+    					<Grid>
+    						<Image x:Name="image4" Source="/JuegoReconVoz;component/Images/CheckOff.png" Stretch="Fill"/>
+    					</Grid>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="Numeros" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image2" Source="/JuegoReconVoz;component/Images/Numeros%20btn.png" Stretch="Fill"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="ReprodStyle" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image2" Source="/JuegoReconVoz;component/Images/BocinaBTN.png" Stretch="Fill"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="RecStyle" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image3" Source="/JuegoReconVoz;component/Images/microfonoBTN.png" Stretch="Fill"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="RegresarStyle" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image1" Source="/JuegoReconVoz;component/Images/btnRegresar.png" Stretch="Fill"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="SiEstilo" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="imgSi" Source="/JuegoReconVoz;component/Images/SIP.png" Stretch="Fill"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="NoEstilo" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="imgNo" Source="/JuegoReconVoz;component/Images/NOP.png" Stretch="Fill"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="AnimalesEstilo" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image3" Source="/JuegoReconVoz;component/Images/animales.png" Stretch="Fill"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="ColorEstilo" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image1" Source="/JuegoReconVoz;component/Images/Colores.png" Stretch="Fill"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="FyVEstilo" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image5" Source="/JuegoReconVoz;component/Images/FyV.png" Stretch="Fill"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="ObjEstilo" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image4" Source="/JuegoReconVoz;component/Images/obj.png" Stretch="Fill"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="numEstilo" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image1" Source="/JuegoReconVoz;component/Images/NUMEROS.png" Stretch="Fill"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="AnimEstilo" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image4" Source="/JuegoReconVoz;component/Images/animales.png" Stretch="Fill"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="ColoresEstilo" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image2" Source="/JuegoReconVoz;component/Images/Colores.png" Stretch="Fill"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="FyVerEstilo" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image3" Source="/JuegoReconVoz;component/Images/FRUTAS.png" Stretch="Fill"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+    	<Style x:Key="EstiloObj" TargetType="{x:Type Button}">
+    		<Setter Property="Template">
+    			<Setter.Value>
+    				<ControlTemplate TargetType="{x:Type Button}">
+    					<Grid>
+    						<Image x:Name="image5" Source="/JuegoReconVoz;component/Images/OBJETOS.png" Stretch="Fill"/>
+    					</Grid>
+    					<ControlTemplate.Triggers>
+    						<Trigger Property="IsFocused" Value="True"/>
+    						<Trigger Property="IsDefaulted" Value="True"/>
+    						<Trigger Property="IsMouseOver" Value="True"/>
+    						<Trigger Property="IsPressed" Value="True"/>
+    						<Trigger Property="IsEnabled" Value="False"/>
+    					</ControlTemplate.Triggers>
+    				</ControlTemplate>
+    			</Setter.Value>
+    		</Setter>
+    	</Style>
+         
+    </Application.Resources>
+</Application>

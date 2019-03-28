@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DILO", "JuegoReconVoz\DILO.csproj", "{FFCDD689-A0B0-47FA-AA60-794ADE793922}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Juego DILO", "Juego DILO\Juego DILO.vdproj", "{3EF3FB80-2976-4A07-B1BB-7FF44D21A1FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FFCDD689-A0B0-47FA-AA60-794ADE793922}.Debug|x86.ActiveCfg = Debug|x86
+		{FFCDD689-A0B0-47FA-AA60-794ADE793922}.Debug|x86.Build.0 = Debug|x86
+		{FFCDD689-A0B0-47FA-AA60-794ADE793922}.Debug|x86.Deploy.0 = Debug|x86
+		{FFCDD689-A0B0-47FA-AA60-794ADE793922}.Release|x86.ActiveCfg = Release|x86
+		{FFCDD689-A0B0-47FA-AA60-794ADE793922}.Release|x86.Build.0 = Release|x86
+		{3EF3FB80-2976-4A07-B1BB-7FF44D21A1FB}.Debug|x86.ActiveCfg = Release
+		{3EF3FB80-2976-4A07-B1BB-7FF44D21A1FB}.Debug|x86.Build.0 = Release
+		{3EF3FB80-2976-4A07-B1BB-7FF44D21A1FB}.Release|x86.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://darkk3ndev.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Juego\u0020DILO\\Juego\u0020DILO.vdproj
+		SccProjectName1 = Juego\u0020DILO
+		SccLocalPath1 = Juego\u0020DILO
+		SccProjectUniqueName2 = JuegoReconVoz\\DILO.csproj
+		SccProjectName2 = JuegoReconVoz
+		SccLocalPath2 = JuegoReconVoz
+	EndGlobalSection
+EndGlobal

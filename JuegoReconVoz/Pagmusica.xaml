@@ -1,0 +1,10 @@
+﻿<Window x:Class="JuegoReconVoz.Pagmusica"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Pagmusica" Height="300" Width="300" Loaded="Window_Loaded">
+    <Grid>
+        <MediaElement Height="120" HorizontalAlignment="Left" Margin="32,68,0,0" Name="mediaElement1" VerticalAlignment="Top" Width="160" >
+            
+        </MediaElement>
+    </Grid>
+</Window>

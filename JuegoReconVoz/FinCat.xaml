@@ -1,0 +1,17 @@
+﻿<Window x:Class="JuegoReconVoz.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Window1" Height="350" Width="500" Name="FinCat" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None" Icon="icono DILO.ico" ResizeMode="NoResize">
+    <Window.Background>
+        <ImageBrush ImageSource="/JuegoReconVoz;component/Images/Frame.png" />
+    </Window.Background>
+    <Grid Height="350" Width="500">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="27*" />
+            <ColumnDefinition Width="45*" />
+            <ColumnDefinition Width="428*" />
+        </Grid.ColumnDefinitions>
+        <Image Height="139" HorizontalAlignment="Left" Margin="96,138,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="149" Source="/JuegoReconVoz;component/Images/DiloFin.png" Grid.Column="2" MouseUp="image1_MouseUp" />
+        <Image Height="102" HorizontalAlignment="Left" Margin="29,30,0,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="364" Source="/JuegoReconVoz;component/Images/felicidadesFin.png" Grid.Column="1" Grid.ColumnSpan="2" />
+    </Grid>
+</Window>
